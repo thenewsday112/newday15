@@ -4,104 +4,64 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<title>Other - News Portal Indonesia</title>
+<title>Other</title>
 <meta name="description" content="Latest other news">
-<link rel="canonical" href="https://railfansday.github.io/newday15/other.html">
+<link rel="canonical" href="https://thenewsday112.github.io/newsmenuday/other.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
-.container{max-width:1000px;margin:0 auto}
-header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
-header h1{margin:0;font-size:26px;letter-spacing:1px}
-nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
-nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
-nav a:hover,nav a.active{background:#2563eb;color:#fff}
-.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
-.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
-.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
-.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
-.article-body{font-size:16px;line-height:1.8;color:#334155}
-.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
-.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
-.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
-.pagination a:hover{background:#f1f5f9}
-.pagination a.active{background:#2563eb;color:#fff}
-footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+}
+* { box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: var(--bg-color); margin: 0; padding: 0; color: var(--text-main); line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+header.site-header { background: var(--card-bg); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.header-inner { max-width: 1100px; margin: 0 auto; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 24px; font-weight: 800; color: var(--primary); text-decoration: none; letter-spacing: -0.5px; }
+nav.category-nav { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; scrollbar-width: none; }
+nav.category-nav::-webkit-scrollbar { display: none; }
+nav.category-nav a { text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 14px; padding: 8px 16px; border-radius: 20px; white-space: nowrap; transition: all 0.2s; background: var(--bg-color); }
+nav.category-nav a:hover, nav.category-nav a.active { background: var(--primary); color: white; }
+.news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-top: 20px; }
+.news-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; border: 1px solid var(--border-color); }
+.news-card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px -5px rgba(0,0,0,0.1); }
+.news-img { width: 100%; height: 180px; object-fit: cover; background: #e2e8f0; display: block; }
+.news-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+.news-meta { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+.badge { background: #eff6ff; color: var(--primary); padding: 4px 10px; border-radius: 20px; }
+.news-title { margin: 0 0 12px 0; font-size: 18px; font-weight: 800; line-height: 1.4; }
+.news-title a { color: var(--text-main); text-decoration: none; }
+.news-title a:hover { color: var(--primary); }
+.news-excerpt { color: var(--text-muted); font-size: 14px; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.read-more { margin-top: auto; font-size: 14px; font-weight: 600; color: var(--primary); text-decoration: none; display: inline-flex; align-items: center; gap: 5px; }
+.read-more:hover { color: var(--primary-dark); }
+.pagination { display: flex; justify-content: center; gap: 8px; margin: 40px 0; flex-wrap: wrap; }
+.pagination a { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 10px; border-radius: 8px; background: var(--card-bg); color: var(--text-main); text-decoration: none; font-weight: 600; border: 1px solid var(--border-color); transition: all 0.2s; }
+.pagination a:hover, .pagination a.active { background: var(--primary); color: white; border-color: var(--primary); }
+.ad-container { background: var(--card-bg); padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 20px; border: 1px solid var(--border-color); }
+footer { text-align: center; padding: 40px 20px; color: var(--text-muted); border-top: 1px solid var(--border-color); margin-top: 40px; background: var(--card-bg); }
+@media (max-width: 768px) { .header-inner { flex-direction: column; align-items: flex-start; gap: 15px; } nav.category-nav { width: 100%; } }
 </style>
 </head>
 <body>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">📰 News Portal</a>
+    </div>
+    <div class="header-inner" style="padding-top:0;">
+        <nav class="category-nav"><a href="index.html" class="">All News</a><a href="technology.html" class="">Technology</a><a href="business.html" class="">Business</a><a href="sports.html" class="">Sports</a><a href="entertainment.html" class="">Entertainment</a><a href="health.html" class="">Health</a><a href="science.html" class="">Science</a><a href="other.html" class="active">Other</a></nav>
+    </div>
+</header>
 <div class="container">
-<header><h1>News Portal Indonesia</h1></header>
-<nav><a href="index.html">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="other.html" class="active">📰 Other</a></nav>
-<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">Other - News Portal Indonesia</h1>
-<article class="article-card">
-    <h2>#63. Agency Chief FOIA Officer Report Training</h2>
-    <div class="article-meta">
-        📅 Sep 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://www.justice.gov/oip/event/agency-chief-foia-officer-report-training" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="Agency Chief FOIA Officer Report Training" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="Agency Chief FOIA Officer Report Training" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>An official website of the United States government</p>
-<p>Official websites use .gov
-
-              A .gov website belongs to an official government organization in the United States.</p>
-<p>Secure .gov websites use HTTPS
-
-              A lock (   
-
-Lock
-Locked padlock
-
-
-
- ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
-<p>Learn more about
-Agency Chief FOIA Officer Report Training
-here</p>
-<p>Agenda will be provided in advance. This training is only open to .gov and .mil employees.</p>
-<p>Office of Information Policy (OIP)U.S. Department of Justice6th Floor441 G St. NW Washington DC 20530</p>
-<p>202-514-3642Email: DOJ.OIP.FOIA@usdoj.gov</p>
-<p>The above e-mail address is used for general correspondence and inquiries. To submit a FOIA request or FOIA administrative appeal to OIP, please visit the Submit and Track a Request or Appeal page.</p>
-<p>Have a question about Government Services?</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://www.justice.gov/oip/event/agency-chief-foia-officer-report-training" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
-            </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;"><h1 style="font-size:28px; font-weight:800; margin:0;">Other</h1></div><div class="ad-container">
 <div style="text-align:center;margin:20px 0;">
     <script type="text/javascript">
         atOptions = {
@@ -114,1052 +74,1205 @@ here</p>
     </script>
     <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
 </div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#39. FY27 Q4 Report Due</h2>
-    <div class="article-meta">
-        📅 Sep 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://www.justice.gov/oip/event/fy27-q4-report-due" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="FY27 Q4 Report Due" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="FY27 Q4 Report Due" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>An official website of the United States government</p>
-<p>Official websites use .gov
-
-              A .gov website belongs to an official government organization in the United States.</p>
-<p>Secure .gov websites use HTTPS
-
-              A lock (   
-
-Lock
-Locked padlock
-
-
-
- ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
-<p>Office of Information Policy (OIP)U.S. Department of Justice6th Floor441 G St. NW Washington DC 20530</p>
-<p>202-514-3642Email: DOJ.OIP.FOIA@usdoj.gov</p>
-<p>The above e-mail address is used for general correspondence and inquiries. To submit a FOIA request or FOIA administrative appeal to OIP, please visit the Submit and Track a Request or Appeal page.</p>
-<p>Have a question about Government Services?</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://www.justice.gov/oip/event/fy27-q4-report-due" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+</div><div class="news-grid">
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/01f7/live/a3d1eaf0-d0fe-11f1-9d25-c3fafb2ab4de.jpg" class="news-img" alt="فیلڈ مارشل عاصم منیر، سعودی عرب اور ترکی کے اعلیٰ حکام کے ہمراہ آج تہران کا دورہ کریں گے: نائب سیکریٹری سپریم نیشنل سکیورٹی کونسل، علی باقری" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#42. FY27 Q3 Report Due</h2>
-    <div class="article-meta">
-        📅 Sep 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://www.justice.gov/oip/event/fy27-q3-report-due" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="FY27 Q3 Report Due" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="FY27 Q3 Report Due" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>An official website of the United States government</p>
-<p>Official websites use .gov
-
-              A .gov website belongs to an official government organization in the United States.</p>
-<p>Secure .gov websites use HTTPS
-
-              A lock (   
-
-Lock
-Locked padlock
-
-
-
- ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
-<p>Office of Information Policy (OIP)U.S. Department of Justice6th Floor441 G St. NW Washington DC 20530</p>
-<p>202-514-3642Email: DOJ.OIP.FOIA@usdoj.gov</p>
-<p>The above e-mail address is used for general correspondence and inquiries. To submit a FOIA request or FOIA administrative appeal to OIP, please visit the Submit and Track a Request or Appeal page.</p>
-<p>Have a question about Government Services?</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://www.justice.gov/oip/event/fy27-q3-report-due" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/urdu/live/cw4g103l0gp9t?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">فیلڈ مارشل عاصم منیر، سعودی عرب اور ترکی کے اعلیٰ حکام کے ہمراہ آج تہران کا دورہ کریں گے: نائب سیکریٹری سپریم نیشنل سکیورٹی کونسل، علی باقری</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/urdu/live/cw4g103l0gp9t?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/86b5/live/065d5f80-cf72-11f1-a701-fddedf244c16.jpg" class="news-img" alt="ካብ ዝፈረሰ ህንፃ ናይሮቢ፡ ክልተ ብህይወት ወፂኦም፡ ሓሙሽተ ገና ደሃዮም ኣይተፈልጠን" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#46. FY27 Q2 Report Due</h2>
-    <div class="article-meta">
-        📅 Sep 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://www.justice.gov/oip/event/fy27-q2-report-due" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="FY27 Q2 Report Due" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="FY27 Q2 Report Due" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>An official website of the United States government</p>
-<p>Official websites use .gov
-
-              A .gov website belongs to an official government organization in the United States.</p>
-<p>Secure .gov websites use HTTPS
-
-              A lock (   
-
-Lock
-Locked padlock
-
-
-
- ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
-<p>Office of Information Policy (OIP)U.S. Department of Justice6th Floor441 G St. NW Washington DC 20530</p>
-<p>202-514-3642Email: DOJ.OIP.FOIA@usdoj.gov</p>
-<p>The above e-mail address is used for general correspondence and inquiries. To submit a FOIA request or FOIA administrative appeal to OIP, please visit the Submit and Track a Request or Appeal page.</p>
-<p>Have a question about Government Services?</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://www.justice.gov/oip/event/fy27-q2-report-due" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/tigrinya/live/c52e0lgwzerrt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ካብ ዝፈረሰ ህንፃ ናይሮቢ፡ ክልተ ብህይወት ወፂኦም፡ ሓሙሽተ ገና ደሃዮም ኣይተፈልጠን</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/tigrinya/live/c52e0lgwzerrt?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4193/live/d77bb980-d0f9-11f1-93e1-3b657b665bcf.png" class="news-img" alt="ኦፌኮ፡ ኣብ ከተማ ሞያሌ ንዘጋጠመ ጐንፂ ኣመልኪቱ ንመንግስቲ ነቒፉ" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#48. Agency Chief FOIA Officer Reports Due on Agency Websites</h2>
-    <div class="article-meta">
-        📅 Sep 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://www.justice.gov/oip/event/agency-chief-foia-officer-reports-due-agency-websites" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="Agency Chief FOIA Officer Reports Due on Agency Websites" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="Agency Chief FOIA Officer Reports Due on Agency Websites" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>An official website of the United States government</p>
-<p>Official websites use .gov
-
-              A .gov website belongs to an official government organization in the United States.</p>
-<p>Secure .gov websites use HTTPS
-
-              A lock (   
-
-Lock
-Locked padlock
-
-
-
- ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
-<p>Agencies are required to post their 2027 Chief FOIA Officer Reports online. Once posted, email OIP with the link to your agency's report.</p>
-<p>Office of Information Policy (OIP)U.S. Department of Justice6th Floor441 G St. NW Washington DC 20530</p>
-<p>202-514-3642Email: DOJ.OIP.FOIA@usdoj.gov</p>
-<p>The above e-mail address is used for general correspondence and inquiries. To submit a FOIA request or FOIA administrative appeal to OIP, please visit the Submit and Track a Request or Appeal page.</p>
-<p>Have a question about Government Services?</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://www.justice.gov/oip/event/agency-chief-foia-officer-reports-due-agency-websites" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/tigrinya/live/c9e8lre541vmt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ኦፌኮ፡ ኣብ ከተማ ሞያሌ ንዘጋጠመ ጐንፂ ኣመልኪቱ ንመንግስቲ ነቒፉ</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/tigrinya/live/c9e8lre541vmt?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c026/live/32c49550-cf0b-11f1-b95c-310d5f3c558a.png" class="news-img" alt="Guddoomiyaha Ismaamulka Nairobi oo si adag ugu hadlay dabaqii ku dumay Islii" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#50. Agency Annual FOIA Reports Due on Agency Websites</h2>
-    <div class="article-meta">
-        📅 Sep 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://www.justice.gov/oip/event/agency-annual-foia-reports-due-agency-websites" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="Agency Annual FOIA Reports Due on Agency Websites" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="Agency Annual FOIA Reports Due on Agency Websites" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>An official website of the United States government</p>
-<p>Official websites use .gov
-
-              A .gov website belongs to an official government organization in the United States.</p>
-<p>Secure .gov websites use HTTPS
-
-              A lock (   
-
-Lock
-Locked padlock
-
-
-
- ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
-<p>Agencies are required to post their Fiscal Year 2026 Annual FOIA Reports on their websites and notify OIP.</p>
-<p>Office of Information Policy (OIP)U.S. Department of Justice6th Floor441 G St. NW Washington DC 20530</p>
-<p>202-514-3642Email: DOJ.OIP.FOIA@usdoj.gov</p>
-<p>The above e-mail address is used for general correspondence and inquiries. To submit a FOIA request or FOIA administrative appeal to OIP, please visit the Submit and Track a Request or Appeal page.</p>
-<p>Have a question about Government Services?</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://www.justice.gov/oip/event/agency-annual-foia-reports-due-agency-websites" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/somali/live/cr5yn4ep377gt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Guddoomiyaha Ismaamulka Nairobi oo si adag ugu hadlay dabaqii ku dumay Islii</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/somali/live/cr5yn4ep377gt?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ab69/live/fa43a670-d073-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="Saudi Arabia yadungua makombora 10 yaliyorushwa na Wahouthi" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#53. Small Volume Agency Chief FOIA Officer Reports Due</h2>
-    <div class="article-meta">
-        📅 Sep 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://www.justice.gov/oip/event/small-volume-agency-chief-foia-officer-reports-due" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="Small Volume Agency Chief FOIA Officer Reports Due" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="Small Volume Agency Chief FOIA Officer Reports Due" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>An official website of the United States government</p>
-<p>Official websites use .gov
-
-              A .gov website belongs to an official government organization in the United States.</p>
-<p>Secure .gov websites use HTTPS
-
-              A lock (   
-
-Lock
-Locked padlock
-
-
-
- ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
-<p>Agencies that received fewer than 100 requests in Fiscal Year 2025 may choose to submit their Chief FOIA Officer Reports to OIP.</p>
-<p>Office of Information Policy (OIP)U.S. Department of Justice6th Floor441 G St. NW Washington DC 20530</p>
-<p>202-514-3642Email: DOJ.OIP.FOIA@usdoj.gov</p>
-<p>The above e-mail address is used for general correspondence and inquiries. To submit a FOIA request or FOIA administrative appeal to OIP, please visit the Submit and Track a Request or Appeal page.</p>
-<p>Have a question about Government Services?</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://www.justice.gov/oip/event/small-volume-agency-chief-foia-officer-reports-due" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/swahili/live/cmn5v6x9pvlzt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Saudi Arabia yadungua makombora 10 yaliyorushwa na Wahouthi</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/swahili/live/cmn5v6x9pvlzt?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ee70/live/67a68210-d0f0-11f1-b441-2b33b063138f.jpg" class="news-img" alt="బ్రెజిల్‌ అధ్యక్షుడిగా మరోసారి ఎన్నికైన లులా డా సిల్వా, మూడు వారాల్లోనే మారిన ఫలితం" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#55. FY27 Q1 Report Due</h2>
-    <div class="article-meta">
-        📅 Sep 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://www.justice.gov/oip/event/fy27-q1-report-due" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="FY27 Q1 Report Due" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="FY27 Q1 Report Due" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>An official website of the United States government</p>
-<p>Official websites use .gov
-
-              A .gov website belongs to an official government organization in the United States.</p>
-<p>Secure .gov websites use HTTPS
-
-              A lock (   
-
-Lock
-Locked padlock
-
-
-
- ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
-<p>Office of Information Policy (OIP)U.S. Department of Justice6th Floor441 G St. NW Washington DC 20530</p>
-<p>202-514-3642Email: DOJ.OIP.FOIA@usdoj.gov</p>
-<p>The above e-mail address is used for general correspondence and inquiries. To submit a FOIA request or FOIA administrative appeal to OIP, please visit the Submit and Track a Request or Appeal page.</p>
-<p>Have a question about Government Services?</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://www.justice.gov/oip/event/fy27-q1-report-due" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/telugu/live/crz98vld5d3pt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">బ్రెజిల్‌ అధ్యక్షుడిగా మరోసారి ఎన్నికైన లులా డా సిల్వా, మూడు వారాల్లోనే మారిన ఫలితం</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/telugu/live/crz98vld5d3pt?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9c87/live/0b4da190-d089-11f1-92f6-357f3b0f345f.jpg" class="news-img" alt="آنچه گذشت؛ گزارش‌ها از سفر میانجی‌های قطری به تهران با افزایش نگرانی‌ از احتمال جنگ" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#59. Agency Chief FOIA Officer Reports Due</h2>
-    <div class="article-meta">
-        📅 Sep 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://www.justice.gov/oip/event/agency-chief-foia-officer-reports-due" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="Agency Chief FOIA Officer Reports Due" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="Agency Chief FOIA Officer Reports Due" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>An official website of the United States government</p>
-<p>Official websites use .gov
-
-              A .gov website belongs to an official government organization in the United States.</p>
-<p>Secure .gov websites use HTTPS
-
-              A lock (   
-
-Lock
-Locked padlock
-
-
-
- ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
-<p>Agencies that received 100 or more requests in Fiscal Year 2025 are required to submit their Chief FOIA Officer Reports to OIP for review. If an extension is required, please email DOJ.OIP.FOIA@usdoj.gov.</p>
-<p>Office of Information Policy (OIP)U.S. Department of Justice6th Floor441 G St. NW Washington DC 20530</p>
-<p>202-514-3642Email: DOJ.OIP.FOIA@usdoj.gov</p>
-<p>The above e-mail address is used for general correspondence and inquiries. To submit a FOIA request or FOIA administrative appeal to OIP, please visit the Submit and Track a Request or Appeal page.</p>
-<p>Have a question about Government Services?</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://www.justice.gov/oip/event/agency-chief-foia-officer-reports-due" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/persian/live/cje36ky44zp0t?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">آنچه گذشت؛ گزارش‌ها از سفر میانجی‌های قطری به تهران با افزایش نگرانی‌ از احتمال جنگ</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/persian/live/cje36ky44zp0t?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/48ae/live/659a6190-d0f4-11f1-a701-fddedf244c16.jpg" class="news-img" alt="مقام‌های ارشد عربستان، ترکیه و پاکستان امروز با مقام‌های ایران در تهران دیدار می‌کنند" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#68. Agency Annual FOIA Reports Due</h2>
-    <div class="article-meta">
-        📅 Sep 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://www.justice.gov/oip/event/agency-annual-report-due" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="Agency Annual FOIA Reports Due" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="Agency Annual FOIA Reports Due" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>An official website of the United States government</p>
-<p>Official websites use .gov
-
-              A .gov website belongs to an official government organization in the United States.</p>
-<p>Secure .gov websites use HTTPS
-
-              A lock (   
-
-Lock
-Locked padlock
-
-
-
- ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
-<p>Agencies must submit their Annual FOIA Report to OIP for review in FOIA.gov. If an extension is required, please email DOJ.OIP.FOIA@usdoj.gov.</p>
-<p>Office of Information Policy (OIP)U.S. Department of Justice6th Floor441 G St. NW Washington DC 20530</p>
-<p>202-514-3642Email: DOJ.OIP.FOIA@usdoj.gov</p>
-<p>The above e-mail address is used for general correspondence and inquiries. To submit a FOIA request or FOIA administrative appeal to OIP, please visit the Submit and Track a Request or Appeal page.</p>
-<p>Have a question about Government Services?</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://www.justice.gov/oip/event/agency-annual-report-due" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/persian/live/cqjdmjpvvj1rt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">مقام‌های ارشد عربستان، ترکیه و پاکستان امروز با مقام‌های ایران در تهران دیدار می‌کنند</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/persian/live/cqjdmjpvvj1rt?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/164a/live/891429d0-ce33-11f1-a86f-f78305ec9987.jpg" class="news-img" alt="Walitti bu&#x27;iinsa magaalaa Moyaaletti mudateen jiraattonni gara Keeniyaatti baqataa jiru jedhame" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#71. FY26 Q4 Data Due</h2>
-    <div class="article-meta">
-        📅 Sep 26, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://www.justice.gov/oip/event/fy26-q4-data-due" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="FY26 Q4 Data Due" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png" alt="FY26 Q4 Data Due" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>An official website of the United States government</p>
-<p>Official websites use .gov
-
-              A .gov website belongs to an official government organization in the United States.</p>
-<p>Secure .gov websites use HTTPS
-
-              A lock (   
-
-Lock
-Locked padlock
-
-
-
- ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
-<p>Please submit your agency's FY26 Q4 data on FOIA.gov.   If your agency will not submit the data by October 30th, please email DOJ.OIP.FOIA@usdoj.gov.</p>
-<p>Office of Information Policy (OIP)U.S. Department of Justice6th Floor441 G St. NW Washington DC 20530</p>
-<p>202-514-3642Email: DOJ.OIP.FOIA@usdoj.gov</p>
-<p>The above e-mail address is used for general correspondence and inquiries. To submit a FOIA request or FOIA administrative appeal to OIP, please visit the Submit and Track a Request or Appeal page.</p>
-<p>Have a question about Government Services?</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://www.justice.gov/oip/event/fy26-q4-data-due" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/afaanoromoo/live/ck62yqp5vp25t?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Walitti bu&#x27;iinsa magaalaa Moyaaletti mudateen jiraattonni gara Keeniyaatti baqataa jiru jedhame</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/afaanoromoo/live/ck62yqp5vp25t?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a05b/live/bd0bd040-d05d-11f1-bbf5-99ed69f0d81f.jpg" class="news-img" alt="Buufanni xiyyaaraa deebiyee yeroo banamaa jirutti Sa&#x27;ud Arabiyaa-Riyaad keessatti dho&#x27;insi dhaga&#x27;ame" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#101. About Me in Dating App: Write the Perfect Profile Bio</h2>
-    <div class="article-meta">
-        📅 Aug 02, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://greatist.com/discover/about-me-on-dating-app" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://media.post.rvohealth.io/wp-content/uploads/sites/2/2024/07/GRT-Female-Phone-Serious-1200x628-Facebook.jpg" alt="About Me in Dating App: Write the Perfect Profile Bio" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://media.post.rvohealth.io/wp-content/uploads/sites/2/2024/07/GRT-Female-Phone-Serious-1200x628-Facebook.jpg" alt="About Me in Dating App: Write the Perfect Profile Bio" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>You’ve swiped right and gotten matches, but it’s not working. It might be your profile that’s holding you back. With just seconds to make an impression, your “About Me” section is crucial. Think of it as your personal highlight reel—enticing and leaving them wanting more. If it’s not working its magic, you could be missing out.</p>
-<p>Read on to learn how to turn that blank box into a captivating snapshot of your fabulous self.</p>
-<p>Your dating profile is your chance to show potential matches why you’re a catch. But what should you include? Since everyone is unique, think about what you bring to the table and what you’re looking for. Let’s break it down.</p>
-<p>Your “About Me” section is your dating profile’s elevator pitch. It’s gotta be snappy, sassy, and totally you. Here’s how to make that blurb irresistible:</p>
-<p>Here are a couple of examples to get the ball rolling:</p>
-<p>Avoid these common pitfalls to make sure your profile sends the right message:</p>
-<p>The photos you choose for your dating profile can make or break your online dating success. Here’s what attracts the most positive attention:</p>
-<p>Nailing your “About Me” section is all about balance — showcasing your personality, values, and interests while keeping it fun and engaging. Little details can make all the difference. So keep it lighthearted and authentic, and you’ll attract matches who truly get you.</p>
-<p>Last medically reviewed on  August 2, 2024</p>
-<p>Discover how to manage anxiety in relationships with tips on communication, self-care, and therapy. Learn to enjoy a healthier love connection.</p>
-<p>There are four particularly bad relationship habits that often rear their heads. Here’s how to rein them in before they cause more conflict between…</p>
-<p>Relationships are really needed, but they’re also really tough. Here are 30 facts to let you know you’re not alone on the journey.</p>
-<p>Long-term love is a windy, bumpy road. We came up with 19 practical, emotionally intelligent ways to find real happiness with someone else.</p>
-<p>The relationship cycle progresses through stages over time. Here's what to expect!</p>
-<p>Wondering if it's true love or just a crush? Discover 10 signs you're not really in love. Learn to tell fleeting infatuation from lasting love.</p>
-<p>Discover 12 expert tips on moving in with your partner. Learn about red flags before moving in together to ensure a smooth transition.</p>
-<p>Navigating your first holiday season with a new partner can get complicated. Here are some great tips to keep things chill. We also have advice on…</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://greatist.com/discover/about-me-on-dating-app" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/afaanoromoo/live/c60rl9gpvydrt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Buufanni xiyyaaraa deebiyee yeroo banamaa jirutti Sa&#x27;ud Arabiyaa-Riyaad keessatti dho&#x27;insi dhaga&#x27;ame</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/afaanoromoo/live/c60rl9gpvydrt?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c331/live/f058ffb0-d033-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="ትራምፕ ኢራን ላይ አዲስ ጥቃት ሊሰነዘሩ ወይም ስምምነት ላይ ሊደርሱ እንደሚችሉ ጠቆሙ" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#131. 10 Signs You Might Not Really Be in Love: How to Tell the Difference</h2>
-    <div class="article-meta">
-        📅 Jun 26, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://greatist.com/discover/signs-youre-not-really-in-love" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://media.post.rvohealth.io/wp-content/uploads/sites/2/2024/06/384835-grt-HIV-Transmission-732x549-thumbnail.jpg" alt="10 Signs You Might Not Really Be in Love: How to Tell the Difference" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://media.post.rvohealth.io/wp-content/uploads/sites/2/2024/06/384835-grt-HIV-Transmission-732x549-thumbnail.jpg" alt="10 Signs You Might Not Really Be in Love: How to Tell the Difference" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>Love can feel like navigating a choose-your-own-adventure book with half the pages missing. Are you truly in love or just caught in a wave of infatuation? Sometimes, what seems like a heart-thumping romance may be a fleeting crush.</p>
-<p>Wondering how to tell the difference? We’ve got you! Here’s a rundown of the 10 signs you’re not really in love.</p>
-<p>Feeling a bit puzzled about your feelings for boo? That’s pretty normal. But before you start planning your future or picking out matching Halloween costumes, you may wanna make sure it’s real love and not a case of a serious crush.</p>
-<p>Here are some signs that you may not really be in love:</p>
-<p>Caught up in the romance novel vibe? If you’re all about the feelings of being in love rather than who’s sharing your popcorn, it might just be that you’re smitten with the idea of love itself.</p>
-<p>Time to check if your relationship is more about the fairy tale than the real person.</p>
-<p>Chatting with your partner shouldn’t feel as shallow as a kiddie pool. If deep talks are tougher than pulling teeth and rarer than a unicorn, it’s a red flag.</p>
-<p>Sticking to small talk about the weather and dinner plans suggests the emotional depth for a lasting bond might be missing.</p>
-<p>When discussions about future plans feel as far-fetched as sci-fi adventures, they may reveal underlying doubts about the relationship’s viability.</p>
-<p>If imagining a future together feels unrealistic or undesirable, it’s time to ask yourself why. Real love plans a future; infatuation lives for the weekend.</p>
-<p>Remember when their sock on the floor was cute? If little quirks now make you more cranky than charmed, it might mean the love goggles are off, your feelings have shifted from affection to annoyance, and the reality check has bounced.</p>
-<p>Love is seeing imperfections and adoring them anyway.</p>
-<p>Feeling more at ease or more ‘yourself’ when your partner isn’t around is a telling sign. If you’re secretly throwing mini-parties when they leave the room, you need to stop and think. Real-deal love means missing their chaos when they’re gone, not celebrating the silence.</p>
-<p>Shared values are the anchor of deep, lasting relationships. If your core values clash more than a polka dot and stripes ensemble, you’re in for a rough ride, as finding common ground could be challenging!</p>
-<p>Lasting love grows from shared beliefs and mutual respect, not from opposing battle lines.</p>
-<p>No respect? No future. Respect is as critical to love as air is to breathing. Without mutual respect, you might just be coexisting rather than genuinely connecting.</p>
-<p>If you no longer admire or respect each other’s opinions and choices, sustaining a healthy relationship will be difficult.</p>
-<p>If they’re out of sight and totally out of mind, that’s not just independence — it might be indifference. When love is real, you should long for their laugh or lame jokes when they’re away. Could it be that your emotional attachment isn’t as strong as it should be for a lasting relationship?</p>
-<p>If your best moments are consistently away from your partner, your heart might not be in it to win it. Perhaps your relationship isn’t providing enough support or happiness.</p>
-<p>True love enriches your life and doesn’t play second fiddle to your social circle. It’s time to evaluate where your emotional energy is invested.</p>
-<p>Still window shopping while you’re supposedly locked down? It’s a sign you might not be all in. A love that lasts doesn’t keep a backup catalog — it’s too busy loving what it already has.</p>
-<p>Knowing why you’re still scanning for alternatives can help you address what might be missing or unfulfilled in your relationship.</p>
-<p>Are you genuinely in love or just in love with being in love? If you’re secretly thrilled when they’re not around, stuck in surface-level chit-chat, or dreading deep-future talks, these are cosmic signs that it’s rethink o’clock.</p>
-<p>Don’t ignore the signals — tuning in now can save you heartache later and lead you toward a love that genuinely fulfills you.</p>
-<p>Last medically reviewed on  June 26, 2024</p>
-<p>What is love? That’s one of life’s biggest questions. So, our Hot Probs columnist Kelly McClure is here to help settle it.</p>
-<p>Appreciate me, myself, and I with these self-love tunes.</p>
-<p>Discover obsessive love disorder, its links to mental illnesses, and the truth behind the romanticized portrayals. Learn more and get help.</p>
-<p>Wondering what to include in your dating profile? Learn how to showcase your unique qualities and what you’re looking for to attract the right matches.</p>
-<p>The relationship cycle progresses through stages over time. Here's what to expect!</p>
-<p>Discover 12 expert tips on moving in with your partner. Learn about red flags before moving in together to ensure a smooth transition.</p>
-<p>Navigating your first holiday season with a new partner can get complicated. Here are some great tips to keep things chill. We also have advice on…</p>
-<p>Robyn Germyn details her experiences dating and getting into relationships after experiencing hair loss due to alopecia areata.</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://greatist.com/discover/signs-youre-not-really-in-love" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/amharic/live/c617knyzlj21t?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ትራምፕ ኢራን ላይ አዲስ ጥቃት ሊሰነዘሩ ወይም ስምምነት ላይ ሊደርሱ እንደሚችሉ ጠቆሙ</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/amharic/live/c617knyzlj21t?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4dbf/live/e09c7740-d08e-11f1-b441-2b33b063138f.jpg" class="news-img" alt="বঙ্গোপসাগরের গভীর নিম্নচাপটি আরো ঘনীভূত হয়ে সোমবার ঘূর্ণিঝড়ে পরিণত হতে পারে বলে পূর্বাভাস" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article>
-<article class="article-card">
-    <h2>#2. READ: Trump indictment related to hush money payment</h2>
-    <div class="article-meta">
-        📅 Apr 04, 2023 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
-        <a href="https://cnn.it/411KYN7" target="_blank" rel="nofollow">Read Source &rarr;</a>
-    </div>
-    <div class="article-body">
-        <img src="https://media.cnn.com/api/v1/images/stellar/prod/230404161048-02-trump-indictment-unsealed.jpg?c=16x9&amp;q=w_800,c_fill" alt="READ: Trump indictment related to hush money payment" loading="lazy">
-        
-            <div style="text-align:center; margin-bottom:20px;"><img src="https://media.cnn.com/api/v1/images/stellar/prod/230404161048-02-trump-indictment-unsealed.jpg?c=16x9&q=w_800,c_fill" alt="READ: Trump indictment related to hush money payment" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
-                <p>Former President Donald Trump has been charged with 34 felony counts in an indictment unsealed Tuesday. Read the indictment and statement of facts here.</p>
-<p>Scan the QR code to download the CNN app on Google Play.</p>
-<p>Scan the QR code to download the CNN app from the Apple Store.</p>
-                <p style="margin-top: 25px;">
-                    <a href="https://cnn.it/411KYN7" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
-                        &rarr; Baca artikel asli
-                    </a>
-                </p>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/bengali/live/cx98zpj6me8gt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">বঙ্গোপসাগরের গভীর নিম্নচাপটি আরো ঘনীভূত হয়ে সোমবার ঘূর্ণিঝড়ে পরিণত হতে পারে বলে পূর্বাভাস</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/bengali/live/cx98zpj6me8gt?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/dd74/live/680e3c30-d0fe-11f1-a701-fddedf244c16.png" class="news-img" alt="जम्मू में भीषण आग से 40 दुकानें जलकर ख़ाक, रेलवे स्टेशन के पास हुआ हादसा" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
             </div>
-            
-<div style="text-align:center; margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-            
-        
-<div style="text-align:center;margin:20px 0;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
-</div>
-
-    </div>
-</article><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/hindi/live/cm15j0y2532wt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">जम्मू में भीषण आग से 40 दुकानें जलकर ख़ाक, रेलवे स्टेशन के पास हुआ हादसा</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/hindi/live/cm15j0y2532wt?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a5a9/live/4074a560-d0f4-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="Iraan fi michoonnishee filannoo Israa&#x27;el jeequuf karoorfachaa jiru - Netaaniyaahuu" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/afaanoromoo/live/c54g1w7pnyz0t?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Iraan fi michoonnishee filannoo Israa&#x27;el jeequuf karoorfachaa jiru - Netaaniyaahuu</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/afaanoromoo/live/c54g1w7pnyz0t?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ab1c/live/bbb06d70-d0f6-11f1-a701-fddedf244c16.jpg" class="news-img" alt="ለምርጫ አንድ ቀን የቀራቸው የእስራኤሉ መሪ ኔታንያሁ 90 በመቶ የሚሆነውን የኢራን የኒውክሌር ፕሮግራም አውድመናል አሉ" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/amharic/live/cwzd6qz2pme5t?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ለምርጫ አንድ ቀን የቀራቸው የእስራኤሉ መሪ ኔታንያሁ 90 በመቶ የሚሆነውን የኢራን የኒውክሌር ፕሮግራም አውድመናል አሉ</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/amharic/live/cwzd6qz2pme5t?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/bf47/live/391aab10-d0f5-11f1-b441-2b33b063138f.jpg" class="news-img" alt="Brésil: Lula yatsindiye manda ya kane ariko ategerejwe n&#x27;inteko ishingamategeko itamushyigikiye n&#x27;igihugu cyacitsemo ibice" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/gahuza/live/c6r7yjdzn7e9t?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Brésil: Lula yatsindiye manda ya kane ariko ategerejwe n&#x27;inteko ishingamategeko itamushyigikiye n&#x27;igihugu cyacitsemo ibice</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/gahuza/live/c6r7yjdzn7e9t?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/595d/live/2cc94510-d0d7-11f1-a701-fddedf244c16.jpg" class="news-img" alt="ရန်ကုန်က ဘားစီးနင်းမှုမှာ အဖမ်းခံရသူတွေထဲ တရားသူကြီးနဲ့ စစ်ဗိုလ်ပါ၀င်" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.co.uk/burmese/live/c60qk4y45v1lt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ရန်ကုန်က ဘားစီးနင်းမှုမှာ အဖမ်းခံရသူတွေထဲ တရားသူကြီးနဲ့ စစ်ဗိုလ်ပါ၀င်</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.co.uk/burmese/live/c60qk4y45v1lt?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_nepali/0526/live/64a85f70-d0ff-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="लुला चौथो पटक राष्ट्रपति चुनिएपछि ब्रजिलमा उत्सव" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/nepali/watch/cm5ynvn6j88do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">लुला चौथो पटक राष्ट्रपति चुनिएपछि ब्रजिलमा उत्सव</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/nepali/watch/cm5ynvn6j88do?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_gujarati/0b04/live/e21f75b0-d0fa-11f1-a701-fddedf244c16.jpg" class="news-img" alt="કચ્છ : પાકિસ્તાનના ચાર માછીમારોને બીએસએફે પકડ્યા હોવાનો દાવો - ન્યૂઝ અપડેટ" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/gujarati/articles/c8vgx5yqw6zeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">કચ્છ : પાકિસ્તાનના ચાર માછીમારોને બીએસએફે પકડ્યા હોવાનો દાવો - ન્યૂઝ અપડેટ</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/gujarati/articles/c8vgx5yqw6zeo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_urdu/c38d/live/19e08ff0-d0a3-11f1-adbe-cd0eaeb0fff9.jpg" class="news-img" alt="نیتن یاہو یا جنرل آئزنکوٹ: موجودہ انتخابات اسرائیلی تاریخ میں سب سے اہم کیوں ہیں؟" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/urdu/articles/c6n04y7e9jelo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">نیتن یاہو یا جنرل آئزنکوٹ: موجودہ انتخابات اسرائیلی تاریخ میں سب سے اہم کیوں ہیں؟</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/urdu/articles/c6n04y7e9jelo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_vietnamese/b5e5/live/c742de20-d0f1-11f1-a9f3-d75f98ab0d20.jpg" class="news-img" alt="Thủ tướng Ba Lan đến Việt Nam: thúc đẩy thương mại, &#x27;bán vũ khí phòng thủ bờ biển&#x27;" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/vietnamese/articles/cvkgklwdygddo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Thủ tướng Ba Lan đến Việt Nam: thúc đẩy thương mại, &#x27;bán vũ khí phòng thủ bờ biển&#x27;</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/vietnamese/articles/cvkgklwdygddo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_nepali/9c4c/live/58a541b0-d0fb-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="श्रीलङ्कानजिकै समुद्रमा &#x27;बिरामी परेका&#x27; ४० इरानी नाविकको उद्धार" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/nepali/articles/cmwyq1z142zzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">श्रीलङ्कानजिकै समुद्रमा &#x27;बिरामी परेका&#x27; ४० इरानी नाविकको उद्धार</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/nepali/articles/cmwyq1z142zzo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_kyrgyz/3774/live/291b6300-d0fd-11f1-b441-2b33b063138f.jpg" class="news-img" alt="&quot;Атамдын башына пакет кийгизип, кабыргасын сындырып өлтүрүштү&quot;. УКМКдагы кыйноого даттанган жаран" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/kyrgyz/articles/c8r4ykvy3kyro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">&quot;Атамдын башына пакет кийгизип, кабыргасын сындырып өлтүрүштү&quot;. УКМКдагы кыйноого даттанган жаран</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/kyrgyz/articles/c8r4ykvy3kyro?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_swahili/4a39/live/f9953530-d0fb-11f1-b441-2b33b063138f.jpg" class="news-img" alt="Nairobi: Maswali yaibuka kuhusu vibali vya jengo lililoporomoka Eastleigh" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/swahili/articles/cq4g1r5gw428o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Nairobi: Maswali yaibuka kuhusu vibali vya jengo lililoporomoka Eastleigh</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/swahili/articles/cq4g1r5gw428o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_tigrinya/860a/live/fb67bd30-d0f9-11f1-a701-fddedf244c16.jpg" class="news-img" alt="ደግሲ ኵነተ-ኲናት ኤርትራን ኢትዮጵያን፡ ዘቕረባኦ ጥርዓናትን ግደ ማሕበረሰብ ዓለምን" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/tigrinya/articles/crwyq1zq9j3xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ደግሲ ኵነተ-ኲናት ኤርትራን ኢትዮጵያን፡ ዘቕረባኦ ጥርዓናትን ግደ ማሕበረሰብ ዓለምን</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/tigrinya/articles/crwyq1zq9j3xo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_sinhala/236e/live/c9c00b20-cc67-11f1-a64c-550be9e3c66b.png" class="news-img" alt="ගාඩි අයිසන්කොට්: ඊශ්‍රායල් මැතිවරණයේ නෙතන්යාහුට &#x27;අභියෝගයක් වී ඇති&#x27; ප්‍රධාන ප්‍රතිවාදියා කවුද?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/sinhala/articles/c6x2vp423n3no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ගාඩි අයිසන්කොට්: ඊශ්‍රායල් මැතිවරණයේ නෙතන්යාහුට &#x27;අභියෝගයක් වී ඇති&#x27; ප්‍රධාන ප්‍රතිවාදියා කවුද?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/sinhala/articles/c6x2vp423n3no?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_somali/c3c8/live/a0455080-d0f8-11f1-b441-2b33b063138f.jpg" class="news-img" alt="Meelo dunida ka mid ah oo bilaa muwaadiniin iyo bilaa xukuumado ah: Maxaysan aagaggaas u lahayn cid iska leh?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/somali/articles/cm4g1vlx8139o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Meelo dunida ka mid ah oo bilaa muwaadiniin iyo bilaa xukuumado ah: Maxaysan aagaggaas u lahayn cid iska leh?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/somali/articles/cm4g1vlx8139o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_hindi/37fa/live/8c2457c0-d0eb-11f1-a955-47bfa70b2e4c.jpg" class="news-img" alt="1977 में रिलायंस ने कैसे बदली थी भारतीय शेयर बाज़ार की तस्वीर?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/hindi/articles/cmy4x74y71y7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">1977 में रिलायंस ने कैसे बदली थी भारतीय शेयर बाज़ार की तस्वीर?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/hindi/articles/cmy4x74y71y7o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_afaanoromoo/bae2/live/1fc78cc0-d0b7-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="Haleellaa aanaa Shirkaatti &#x27;daa&#x27;imman dabalatee namoota 40 ol galaafate&#x27; jedhamee hanga ammaa kan beeknu" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/afaanoromoo/articles/cwg7xye3v8nro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Haleellaa aanaa Shirkaatti &#x27;daa&#x27;imman dabalatee namoota 40 ol galaafate&#x27; jedhamee hanga ammaa kan beeknu</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/afaanoromoo/articles/cwg7xye3v8nro?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_tamil/667b/live/f06ef570-d0f3-11f1-b441-2b33b063138f.png" class="news-img" alt="வங்கக்கடலில் உருவானது அர்னாப் புயல் - தமிழ்நாட்டில் எங்கெல்லாம் மழை?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/tamil/articles/cmx23wzl54dqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">வங்கக்கடலில் உருவானது அர்னாப் புயல் - தமிழ்நாட்டில் எங்கெல்லாம் மழை?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/tamil/articles/cmx23wzl54dqo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/images/ic/400x400/p0gwv2hj.png" class="news-img" alt="Amka Na BBC" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/swahili/bbc_swahili_radio/w1730vrgxhfrgwv?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Amka Na BBC</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/swahili/bbc_swahili_radio/w1730vrgxhfrgwv?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/images/ic/400x400/p0gwv4vp.png" class="news-img" alt="Idaacadda Subaxnimo" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/somali/bbc_somali_radio/w1730vt3syn42sd?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Idaacadda Subaxnimo</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/somali/bbc_somali_radio/w1730vt3syn42sd?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_igbo/f573/live/7051d100-d0ee-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="Kamene Okonjo: Ihe ndị ị maghị maka afọ mụrụ Ngozi Okonjo-Iweala na Eze Odinala Ọgwashị-Ukwu lara mmụọ" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/igbo/articles/cq5yn3dmdyr9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Kamene Okonjo: Ihe ndị ị maghị maka afọ mụrụ Ngozi Okonjo-Iweala na Eze Odinala Ọgwashị-Ukwu lara mmụọ</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/igbo/articles/cq5yn3dmdyr9o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_urdu/d037/live/348c4260-d07e-11f1-a4ba-351760cfea6a.jpg" class="news-img" alt="ذوالفقار علی بھٹو پاکستان کی آزادی کے کئی سال بعد بھی خود کو ’انڈیا کا شہری‘ ثابت کرنے کی کوشش کیوں کرتے رہے؟" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/urdu/articles/cqz0vpxledgko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ذوالفقار علی بھٹو پاکستان کی آزادی کے کئی سال بعد بھی خود کو ’انڈیا کا شہری‘ ثابت کرنے کی کوشش کیوں کرتے رہے؟</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/urdu/articles/cqz0vpxledgko?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_swahili/1fc3/live/6734c850-cede-11f1-b441-2b33b063138f.jpg" class="news-img" alt="Je, akili mnemba inatishia ajira za wanawake?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/swahili/articles/cm75pvd0vl7wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Je, akili mnemba inatishia ajira za wanawake?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/swahili/articles/cm75pvd0vl7wo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_telugu/f2a7/live/93a370d0-d0eb-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="మోదీని ఉద్దేశించి ఖర్గే చేసిన వ్యాఖ్యలేంటి, క్షమాపణ చెప్పాలని బీజేపీ ఎందుకు డిమాండ్ చేస్తుంది?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/telugu/articles/ckx2qyj84p98o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">మోదీని ఉద్దేశించి ఖర్గే చేసిన వ్యాఖ్యలేంటి, క్షమాపణ చెప్పాలని బీజేపీ ఎందుకు డిమాండ్ చేస్తుంది?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/telugu/articles/ckx2qyj84p98o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_hausa/ecd6/live/ac025c70-d06b-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="Ko Kwankwaso zai raba ƙuri&#x27;ar Atiku a jihohin arewa?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/hausa/articles/cqj34vrkpzjko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Ko Kwankwaso zai raba ƙuri&#x27;ar Atiku a jihohin arewa?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/hausa/articles/cqj34vrkpzjko?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_thai/e676/live/8534e970-d0c8-11f1-b441-2b33b063138f.jpg" class="news-img" alt="กลุ่มการเมืองที่นำโดยนักศึกษา ใกล้ชนะเลือกตั้งในเซอร์เบีย หลังผู้นำที่ครองอำนาจมายาวนานยอมรับความพ่ายแพ้" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/thai/articles/ckzd6qmge614o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">กลุ่มการเมืองที่นำโดยนักศึกษา ใกล้ชนะเลือกตั้งในเซอร์เบีย หลังผู้นำที่ครองอำนาจมายาวนานยอมรับความพ่ายแพ้</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/thai/articles/ckzd6qmge614o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_marathi/eca3/live/331aa3d0-d0e8-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="ब्राझीलमध्ये उजव्या विचारसरणीच्या राजकारणाला मोठा धक्का; लुला चौथ्यांदा होणार राष्ट्राध्यक्ष" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/marathi/articles/crq5ny6peywqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ब्राझीलमध्ये उजव्या विचारसरणीच्या राजकारणाला मोठा धक्का; लुला चौथ्यांदा होणार राष्ट्राध्यक्ष</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/marathi/articles/crq5ny6peywqo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/images/ic/400x400/p0gwv2hj.png" class="news-img" alt="Amka Na BBC" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/swahili/bbc_swahili_radio/w1730vrgxhfrc4q?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Amka Na BBC</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/swahili/bbc_swahili_radio/w1730vrgxhfrc4q?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_bengali/a69f/live/3152f8a0-d0e7-11f1-a701-fddedf244c16.jpg" class="news-img" alt="ব্রাজিলে চতুর্থবারের মতো প্রেসিডেন্ট নির্বাচিত লুলা, সামনে বৈরী কংগ্রেস ও বিভক্ত দেশ" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/bengali/articles/cqlye383181do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ব্রাজিলে চতুর্থবারের মতো প্রেসিডেন্ট নির্বাচিত লুলা, সামনে বৈরী কংগ্রেস ও বিভক্ত দেশ</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/bengali/articles/cqlye383181do?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_korean/3d00/live/edf93830-cffb-11f1-b444-6fb1f13f8d87.jpg" class="news-img" alt="프랑스 전역서 대규모 시위 이어져…충돌 속 1300명 이상 체포" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/korean/articles/c6x2w0klj0lzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">프랑스 전역서 대규모 시위 이어져…충돌 속 1300명 이상 체포</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/korean/articles/c6x2w0klj0lzo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_nepali/927b/live/ce5e82d0-d0e3-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="ब्रजिलको राष्ट्रपतिमा लुलाको पुनरागमन, दक्षिणपन्थी शक्तिलाई धक्का" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/nepali/articles/cq23dr5gxmg8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ब्रजिलको राष्ट्रपतिमा लुलाको पुनरागमन, दक्षिणपन्थी शक्तिलाई धक्का</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/nepali/articles/cq23dr5gxmg8o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_tamil/bbbc/live/48b38d70-d06f-11f1-afcb-6b9b9432d8fc.jpg" class="news-img" alt="அரசு ரகசிய ஆவணங்களை ரயிலில் தவறவிட்ட அதிகாரி - வாழ்க்கையின் மிகப்பெரிய தவறிலிருந்து மீண்டது எப்படி?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/tamil/articles/cmx2dy3jd12do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">அரசு ரகசிய ஆவணங்களை ரயிலில் தவறவிட்ட அதிகாரி - வாழ்க்கையின் மிகப்பெரிய தவறிலிருந்து மீண்டது எப்படி?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/tamil/articles/cmx2dy3jd12do?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_bengali/c185/live/e5b4be50-d0e2-11f1-ad70-07daa2562508.jpg" class="news-img" alt="পত্রিকা: &#x27;বিশেষ পাসপোর্ট পাচ্ছে ৬৯ হাজার রোহিঙ্গা&#x27;" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/bengali/articles/c6kgqn0ndqw5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">পত্রিকা: &#x27;বিশেষ পাসপোর্ট পাচ্ছে ৬৯ হাজার রোহিঙ্গা&#x27;</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/bengali/articles/c6kgqn0ndqw5o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_japanese/116f/live/8cce05e0-d096-11f1-b441-2b33b063138f.jpg" class="news-img" alt="ヴェネズエラの反体制派指導者マチャド氏、10カ月ぶり帰国　ノーベル平和賞受賞で出国以来" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/japanese/articles/cwnv0g93d51zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ヴェネズエラの反体制派指導者マチャド氏、10カ月ぶり帰国　ノーベル平和賞受賞で出国以来</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/japanese/articles/cwnv0g93d51zo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_japanese/e676/live/8534e970-d0c8-11f1-b441-2b33b063138f.jpg" class="news-img" alt="セルビア総選挙、学生主導の抗議運動が与党倒す　前大統領は敗北認める" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/japanese/articles/c820vdyddwk4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">セルビア総選挙、学生主導の抗議運動が与党倒す　前大統領は敗北認める</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/japanese/articles/c820vdyddwk4o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_urdu/79c4/live/5c489740-d0e7-11f1-a701-fddedf244c16.png" class="news-img" alt="مصطفیٰ قریشی کا خصوصی انٹرویو: دس روپے کا پہلا چیک اور سلطان راہی کے قتل سے پہلے آخری گفتگو کی کہانی" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/urdu/articles/c6pwgkg9kklvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">مصطفیٰ قریشی کا خصوصی انٹرویو: دس روپے کا پہلا چیک اور سلطان راہی کے قتل سے پہلے آخری گفتگو کی کہانی</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/urdu/articles/c6pwgkg9kklvo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_swahili/459f/live/3edf6e20-d0ee-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="Netanyahu au upinzani? Israel yaelekea uchaguzi huku ikigawanyika kisiasa" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/swahili/articles/cj20vdlv6vr4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Netanyahu au upinzani? Israel yaelekea uchaguzi huku ikigawanyika kisiasa</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/swahili/articles/cj20vdlv6vr4o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_telugu/8298/live/417dc580-d087-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="జేబులో రూ. 300తో బస్సెక్కి బెంగళూరు వచ్చిన కుర్రాడు ఇండియాలో అగ్రశ్రేణి నటుల్లో ఒకరిగా ఎలా ఎదిగారు?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/telugu/articles/ckdd8gr1378jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">జేబులో రూ. 300తో బస్సెక్కి బెంగళూరు వచ్చిన కుర్రాడు ఇండియాలో అగ్రశ్రేణి నటుల్లో ఒకరిగా ఎలా ఎదిగారు?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/telugu/articles/ckdd8gr1378jo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_gujarati/7479/live/4a2ad5a0-d0e7-11f1-89cb-332da726599e.jpg" class="news-img" alt="બ્રાઝિલ ચૂંટણી : જમણેરી રાજકારણને મોટો ઝટકો, ટ્રમ્પ તરફી મનાતા બોલસોનારોની હાર થતાં લુલા બનશે ચોથી વાર રાષ્ટ્રપતિ" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/gujarati/articles/cqy7lm4n186ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">બ્રાઝિલ ચૂંટણી : જમણેરી રાજકારણને મોટો ઝટકો, ટ્રમ્પ તરફી મનાતા બોલસોનારોની હાર થતાં લુલા બનશે ચોથી વાર રાષ્ટ્રપતિ</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/gujarati/articles/cqy7lm4n186ko?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_sinhala/e24e/live/c75a4d30-cec1-11f1-ae9c-0303957c36f8.jpg" class="news-img" alt="ඔබත් 48CC මෝටර් සයිකලයක හිමිකරුවෙක් ද? අලුත් ලියාපදිංචි නීතිය ගැන ඔබ දැනගත යුතු දේවල් මෙන්න" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/sinhala/articles/c6jdmrn17g7no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ඔබත් 48CC මෝටර් සයිකලයක හිමිකරුවෙක් ද? අලුත් ලියාපදිංචි නීතිය ගැන ඔබ දැනගත යුතු දේවල් මෙන්න</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/sinhala/articles/c6jdmrn17g7no?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_punjabi/8ed0/live/97ff9570-c71b-11f1-a82f-35874a3aae81.jpg" class="news-img" alt="ਪੰਜਾਬ ਵਿੱਚ ਪਰਾਲੀ ਸਾੜਨ ਲਈ ਕਿਸਾਨ ਹਾਲੇ ਵੀ ਕਿਉਂ ਹਨ ਮਜਬੂਰ, ਉਨ੍ਹਾਂ ਲਈ ਇਹ ਮੁੱਦਾ ਕਿੰਨਾ ਵੱਡਾ ਹੈ ਤੇ ਕੀ ਹਨ ਚੁਣੌਤੀਆਂ" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/punjabi/articles/c3pwgnv119qxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ਪੰਜਾਬ ਵਿੱਚ ਪਰਾਲੀ ਸਾੜਨ ਲਈ ਕਿਸਾਨ ਹਾਲੇ ਵੀ ਕਿਉਂ ਹਨ ਮਜਬੂਰ, ਉਨ੍ਹਾਂ ਲਈ ਇਹ ਮੁੱਦਾ ਕਿੰਨਾ ਵੱਡਾ ਹੈ ਤੇ ਕੀ ਹਨ ਚੁਣੌਤੀਆਂ</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/punjabi/articles/c3pwgnv119qxo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_korean/2408/live/9533f020-d0d0-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="룰라, 브라질 대선서 4선 성공...분열된 민심과 비우호적인 의회 넘어야" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/korean/articles/cwdr8evjkzp2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">룰라, 브라질 대선서 4선 성공...분열된 민심과 비우호적인 의회 넘어야</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/korean/articles/cwdr8evjkzp2o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_telugu/8f1a/live/61182ce0-d088-11f1-92f6-357f3b0f345f.png" class="news-img" alt="బుకాంగి: కాలువలోకి వచ్చిన ఆడ సొర చేపను ఎన్నిసార్లు వెనక్కు పంపినా ఎందుకు మళ్లీమళ్లీ అక్కడికే వచ్చింది? ఇప్పుడది ఎక్కడుంది" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/telugu/articles/cj20vdgk9kxko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">బుకాంగి: కాలువలోకి వచ్చిన ఆడ సొర చేపను ఎన్నిసార్లు వెనక్కు పంపినా ఎందుకు మళ్లీమళ్లీ అక్కడికే వచ్చింది? ఇప్పుడది ఎక్కడుంది</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/telugu/articles/cj20vdgk9kxko?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_tamil/34da/live/528f7510-d0d9-11f1-ac2b-09beb944cac6.jpg" class="news-img" alt="பிரேசிலில் 4-வது முறையாக அதிபராகும் லுலா: அமெரிக்காவுக்கு ஏமாற்றமா?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/tamil/articles/cq70plg8nw96o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">பிரேசிலில் 4-வது முறையாக அதிபராகும் லுலா: அமெரிக்காவுக்கு ஏமாற்றமா?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/tamil/articles/cq70plg8nw96o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_kyrgyz/8a9c/live/74ad0b40-d0e2-11f1-a701-fddedf244c16.png" class="news-img" alt="&quot;Биз шайлоодо утулдук&quot;. Вучич Сербиядагы шайлоодо студенттик кыймылга жеңилгенин моюнга алды" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/kyrgyz/articles/cq70plg63ex8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">&quot;Биз шайлоодо утулдук&quot;. Вучич Сербиядагы шайлоодо студенттик кыймылга жеңилгенин моюнга алды</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/kyrgyz/articles/cq70plg63ex8o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_bengali/ff9b/live/cd9d7b20-9b8d-11f1-a291-b542ee92de7c.jpg" class="news-img" alt="বাংলাদেশে সাপের বিষের প্রতিষেধক বা অ্যান্টিভেনম তৈরির কাজ কতদূর?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/bengali/articles/c70gleqrnljo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">বাংলাদেশে সাপের বিষের প্রতিষেধক বা অ্যান্টিভেনম তৈরির কাজ কতদূর?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/bengali/articles/c70gleqrnljo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_hindi/6bcf/live/2c1b4ed0-d0f8-11f1-b5b1-192f0fa11760.jpg" class="news-img" alt="इंज़माम-उल-हक़: नींद और भूलने के क़िस्सों से लेकर सिफ़ारिश पर टीम में आने के आरोप तक" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/hindi/articles/cq77pkzxe5v2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">इंज़माम-उल-हक़: नींद और भूलने के क़िस्सों से लेकर सिफ़ारिश पर टीम में आने के आरोप तक</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/hindi/articles/cq77pkzxe5v2o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_nepali/7e2b/live/76dc0990-d07c-11f1-a4ba-351760cfea6a.png" class="news-img" alt="बुधवारदेखि फेरि &#x27;देशका धेरैजसो ठाउँमा वर्षा गराउने&#x27; भनिएको मौसमी प्रणाली के हो?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/nepali/articles/c6x2w0xke1gko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">बुधवारदेखि फेरि &#x27;देशका धेरैजसो ठाउँमा वर्षा गराउने&#x27; भनिएको मौसमी प्रणाली के हो?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/nepali/articles/c6x2w0xke1gko?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_tamil/764d/live/851b33a0-d08b-11f1-b441-2b33b063138f.jpg" class="news-img" alt="பார்வை நன்றாக இருந்தால் கண்கள் ஆரோக்கியமாக இருப்பதாக அர்த்தமா? அறிகுறி இல்லாமலேயே உருவாகும் கண் பாதிப்புகள்: 8 கேள்வி - பதில்கள்" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/tamil/articles/cm0rl49ve95do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">பார்வை நன்றாக இருந்தால் கண்கள் ஆரோக்கியமாக இருப்பதாக அர்த்தமா? அறிகுறி இல்லாமலேயே உருவாகும் கண் பாதிப்புகள்: 8 கேள்வி - பதில்கள்</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/tamil/articles/cm0rl49ve95do?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_marathi/c323/live/38598420-d0d8-11f1-b441-2b33b063138f.jpg" class="news-img" alt="पाटण्यात काँग्रेसच्या सभेत गदारोळ; भाजप म्हणतं, मोदींबद्दलच्या वक्तव्याबाबत खर्गेंनी माफी मागावी" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/marathi/articles/c69qzp25np9vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">पाटण्यात काँग्रेसच्या सभेत गदारोळ; भाजप म्हणतं, मोदींबद्दलच्या वक्तव्याबाबत खर्गेंनी माफी मागावी</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/marathi/articles/c69qzp25np9vo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_persian/7e33/live/ce78e720-cfbb-11f1-9012-0172b9f73a72.jpg" class="news-img" alt="آیا اوکراین حاضر است برای صلح از بخشی از خاک خود بگذرد؟" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/persian/articles/cwe9l1e5l7jno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">آیا اوکراین حاضر است برای صلح از بخشی از خاک خود بگذرد؟</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/persian/articles/cwe9l1e5l7jno?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_nepali/3665/live/624ccb60-d07f-11f1-b441-2b33b063138f.jpg" class="news-img" alt="विदेशी खेलाडीको आगमन र उच्च प्रविधिले चर्चा पाएको एनपीएल सीजन थ्री" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/nepali/articles/cjvgx54574qxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">विदेशी खेलाडीको आगमन र उच्च प्रविधिले चर्चा पाएको एनपीएल सीजन थ्री</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/nepali/articles/cjvgx54574qxo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_hindi/57d0/live/c4684080-d0e9-11f1-9d78-5fd4400ac71a.jpg" class="news-img" alt="ब्राज़ील में दक्षिणपंथी राजनीति को झटका, लूला चौथी बार बनेंगे राष्ट्रपति" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/hindi/articles/cwy8lpddj885o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ब्राज़ील में दक्षिणपंथी राजनीति को झटका, लूला चौथी बार बनेंगे राष्ट्रपति</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/hindi/articles/cwy8lpddj885o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_marathi/ba5f/live/15afd4d0-d072-11f1-93e1-3b657b665bcf.png" class="news-img" alt="सौदी अरेबियामध्ये अडकले शेकडो भारतीय; उमराह यात्रेकरूंनी बीबीसीला काय सांगितलं?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/marathi/articles/cqn73j6n1jemo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">सौदी अरेबियामध्ये अडकले शेकडो भारतीय; उमराह यात्रेकरूंनी बीबीसीला काय सांगितलं?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/marathi/articles/cqn73j6n1jemo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_japanese/4ed9/live/2720f160-d0e3-11f1-ad70-07daa2562508.jpg" class="news-img" alt="ブラジル大統領選、現職ルラ氏が決選投票で当選　敗れた右派候補は「あり得ない」" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/japanese/articles/cky83ywyx5yjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ブラジル大統領選、現職ルラ氏が決選投票で当選　敗れた右派候補は「あり得ない」</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/japanese/articles/cky83ywyx5yjo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_vietnamese/08b1/live/ff824cb0-cec3-11f1-a701-fddedf244c16.png" class="news-img" alt="Giải tỏa Vĩnh Hưng: Vì sao người dân mặc áo đỏ xuống đường phản đối?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/vietnamese/articles/cvwy7wjly0p6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Giải tỏa Vĩnh Hưng: Vì sao người dân mặc áo đỏ xuống đường phản đối?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/vietnamese/articles/cvwy7wjly0p6o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_persian/196c/live/09cbe720-d0d7-11f1-a701-fddedf244c16.jpg" class="news-img" alt="لولا با شکست فلاویو بولسونارو برای چهارمین بار رئیس‌جمهور برزیل شد" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/persian/articles/cw8dz0rjv22zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">لولا با شکست فلاویو بولسونارو برای چهارمین بار رئیس‌جمهور برزیل شد</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/persian/articles/cw8dz0rjv22zo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_persian/817d/live/13e77a40-d059-11f1-a701-fddedf244c16.png" class="news-img" alt="جدال تلخ بر سر خدمت سربازی؛ موضوعی که می‌تواند آینده اسرائیل را تغییر دهد" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>26 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/persian/articles/cq0ldx6zgnn1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">جدال تلخ بر سر خدمت سربازی؛ موضوعی که می‌تواند آینده اسرائیل را تغییر دهد</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/persian/articles/cq0ldx6zgnn1o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_persian/2341/live/dc9f0b10-d0b3-11f1-960c-a30ffadcd9ea.jpg" class="news-img" alt="ماریا کورینا ماچادو، رهبر مخالفان ونزوئلا، پس از ماه‌ها تبعید به کشورش بازگشت" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/persian/articles/c674pww34d7zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ماریا کورینا ماچادو، رهبر مخالفان ونزوئلا، پس از ماه‌ها تبعید به کشورش بازگشت</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/persian/articles/c674pww34d7zo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_persian/8eee/live/9ed65800-c975-11f1-80fc-ab418b149008.jpg" class="news-img" alt="سندرم «کم‌آوردن در ورزش»؛ چرا مردان در سکوت رنج می‌کشند؟" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/persian/articles/cmp3gzd98xlpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">سندرم «کم‌آوردن در ورزش»؛ چرا مردان در سکوت رنج می‌کشند؟</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/persian/articles/cmp3gzd98xlpo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_urdu/3db1/live/64fefca0-d08b-11f1-b441-2b33b063138f.png" class="news-img" alt="’وہ محبت کی زبان سمجھتے ہیں‘: ملک خان مرجان کے افغان طالبان اور ٹی ٹی پی سے مذاکرات سے متعلق بیان پر حکومتی ترجمانوں کی وضاحتیں" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/urdu/articles/cjn5v6qn909ro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">’وہ محبت کی زبان سمجھتے ہیں‘: ملک خان مرجان کے افغان طالبان اور ٹی ٹی پی سے مذاکرات سے متعلق بیان پر حکومتی ترجمانوں کی وضاحتیں</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/urdu/articles/cjn5v6qn909ro?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_urdu/3022/live/ec027c90-d090-11f1-a701-fddedf244c16.jpg" class="news-img" alt="گوجرانوالہ میں رشتے سے مبینہ انکار کے تین برس بعد ولیمے کے روز دلہن قتل، پولیس کو ملزمان کی تلاش" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/urdu/articles/crlykezxwv48o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">گوجرانوالہ میں رشتے سے مبینہ انکار کے تین برس بعد ولیمے کے روز دلہن قتل، پولیس کو ملزمان کی تلاش</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/urdu/articles/crlykezxwv48o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_pashto/3189/live/5ab41630-d087-11f1-92f6-357f3b0f345f.jpg" class="news-img" alt="&#x27;زه له یوې وړې خونې د سفیرې په توګه چارې سمبالوم&#x27;" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/pashto/articles/ck4g105243ggo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">&#x27;زه له یوې وړې خونې د سفیرې په توګه چارې سمبالوم&#x27;</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/pashto/articles/ck4g105243ggo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_yoruba/e2ae/live/13ebb490-cedb-11f1-b441-2b33b063138f.jpg" class="news-img" alt="&#x27;Mo mọ̀ nípa ẹ̀sùn tí bàbá mi ń kojú, ó kún ohun tí mi ò ṣe jẹ́ kí bàbá mi súnmọ́ àwọn ọmọ mi&#x27;" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/yoruba/articles/c6lykez2w2lno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">&#x27;Mo mọ̀ nípa ẹ̀sùn tí bàbá mi ń kojú, ó kún ohun tí mi ò ṣe jẹ́ kí bàbá mi súnmọ́ àwọn ọmọ mi&#x27;</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/yoruba/articles/c6lykez2w2lno?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_hindi/e36f/live/5db2bdf0-d08c-11f1-92f6-357f3b0f345f.jpg" class="news-img" alt="अरुणाचल प्रदेश: चीन के मेगा डैम का &#x27;मुक़ाबला&#x27; करने वाले भारत के इस प्रोजेक्ट के ख़िलाफ़ सड़कों पर क्यों उतरे लोग" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/hindi/articles/cm0qk4py0lnjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">अरुणाचल प्रदेश: चीन के मेगा डैम का &#x27;मुक़ाबला&#x27; करने वाले भारत के इस प्रोजेक्ट के ख़िलाफ़ सड़कों पर क्यों उतरे लोग</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/hindi/articles/cm0qk4py0lnjo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_tamil/03d7/live/21a07b00-d081-11f1-93e1-3b657b665bcf.png" class="news-img" alt="ஹைதராபாத்: 1,000 பேருடன் பாலியல் உரையாடல்; 82 பேரின் நிர்வாணப் படங்கள், வீடியோக்களைச் சேகரித்த நபர் - போலீசாரிடம் சிக்கியது எப்படி?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/tamil/articles/ck62y09mj66zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ஹைதராபாத்: 1,000 பேருடன் பாலியல் உரையாடல்; 82 பேரின் நிர்வாணப் படங்கள், வீடியோக்களைச் சேகரித்த நபர் - போலீசாரிடம் சிக்கியது எப்படி?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/tamil/articles/ck62y09mj66zo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_afaanoromoo/78fd/live/0ee508e0-d078-11f1-afcb-6b9b9432d8fc.png" class="news-img" alt="&quot;Meeshaan waraanaa biyya tokkoof gahu karaa Mitsuwaan TPLFfiif dhiyaate&quot; to&#x27;atameera - Fiild Maarshaal Biraanuu" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/afaanoromoo/articles/c693zvdq0ykzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">&quot;Meeshaan waraanaa biyya tokkoof gahu karaa Mitsuwaan TPLFfiif dhiyaate&quot; to&#x27;atameera - Fiild Maarshaal Biraanuu</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/afaanoromoo/articles/c693zvdq0ykzo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_tamil/6432/live/3e8c6ec0-d083-11f1-a701-fddedf244c16.jpg" class="news-img" alt="&#x27;சரிந்த ஜி.எஸ்.டி வசூல், அதிகரித்த பணவீக்கம்&#x27; - தமிழ்நாட்டின் தற்போதைய நிலை என்ன?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/tamil/articles/cmx23w400gevo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">&#x27;சரிந்த ஜி.எஸ்.டி வசூல், அதிகரித்த பணவீக்கம்&#x27; - தமிழ்நாட்டின் தற்போதைய நிலை என்ன?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/tamil/articles/cmx23w400gevo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_telugu/7417/live/ac5220c0-d084-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="అండర్ వరల్డ్ అంటే బాలీవుడ్ వణికిన ఆ రోజులు ఎలా ఉండేవంటే.." loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/telugu/articles/c68xz91jx8xeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">అండర్ వరల్డ్ అంటే బాలీవుడ్ వణికిన ఆ రోజులు ఎలా ఉండేవంటే..</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/telugu/articles/c68xz91jx8xeo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_marathi/1e47/live/327acab0-d082-11f1-b441-2b33b063138f.jpg" class="news-img" alt="फारुख अब्दुल्ला यांच्या विधानावरुन गदारोळ, भाजपने काय दिली प्रतिक्रिया?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/marathi/articles/cqvgj1kjp1k3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">फारुख अब्दुल्ला यांच्या विधानावरुन गदारोळ, भाजपने काय दिली प्रतिक्रिया?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/marathi/articles/cqvgj1kjp1k3o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_gujarati/3f6f/live/19697d40-d079-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="&#x27;કૉલેજિયમમાં નિમણૂકોના મામલે પૂર્વ સીજેઆઈ ચંદ્રચૂડ સરકાર પ્રત્યે વધારે નરમ હતા&#x27;, જસ્ટિસ કૌલના પુસ્તકમાં કરાયેલી ટિપ્પણી બાદ વિવાદ" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/gujarati/articles/cmn8w2xvwp2po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">&#x27;કૉલેજિયમમાં નિમણૂકોના મામલે પૂર્વ સીજેઆઈ ચંદ્રચૂડ સરકાર પ્રત્યે વધારે નરમ હતા&#x27;, જસ્ટિસ કૌલના પુસ્તકમાં કરાયેલી ટિપ્પણી બાદ વિવાદ</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/gujarati/articles/cmn8w2xvwp2po?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_hindi/e355/live/b9670b60-d082-11f1-a701-fddedf244c16.jpg" class="news-img" alt="पटना में कांग्रेस की सभा में हंगामा, खड़गे की पीएम मोदी पर टिप्पणी को लेकर बीजेपी ने माफ़ी की मांग की" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/hindi/articles/crje51ky0w4lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">पटना में कांग्रेस की सभा में हंगामा, खड़गे की पीएम मोदी पर टिप्पणी को लेकर बीजेपी ने माफ़ी की मांग की</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/hindi/articles/crje51ky0w4lo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_sinhala/d3ca/live/2c1c9bb0-d066-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="ඉරාන නාවිකයින් 40 දෙනෙක් ශ්‍රී ලංකාව හරහා ඉරානයට යැවූ මෙහෙයුම" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/sinhala/articles/c8x23x07neg9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ඉරාන නාවිකයින් 40 දෙනෙක් ශ්‍රී ලංකාව හරහා ඉරානයට යැවූ මෙහෙයුම</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/sinhala/articles/c8x23x07neg9o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_tamil/e06d/live/ffd1aba0-d078-11f1-b441-2b33b063138f.jpg" class="news-img" alt="&quot;நூறு முறை கேட்ட பிறகே திருமணம்&quot; - விஜய் தேவரகொண்டா பேசியது ராஷ்மிகாவை அவமதிக்கிறதா? விவாதம் ஏன்?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/tamil/articles/c674pw097xggo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">&quot;நூறு முறை கேட்ட பிறகே திருமணம்&quot; - விஜய் தேவரகொண்டா பேசியது ராஷ்மிகாவை அவமதிக்கிறதா? விவாதம் ஏன்?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/tamil/articles/c674pw097xggo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_ukrainian/48db/live/8181bc50-cc71-11f1-baeb-8d65d4bcd7ab.png" class="news-img" alt="Що їсти, щоб шкіра довше була молодою" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/ukrainian/articles/c3ewen4n1l5eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Що їсти, щоб шкіра довше була молодою</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/ukrainian/articles/c3ewen4n1l5eo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_pashto/814f/live/f6d79180-d05b-11f1-b441-2b33b063138f.jpg" class="news-img" alt="اسرائیلو کې د ټاکنو په ورځ لوېدیځې غاړې ته غځېدلې ټولې ځمکنۍ لارې تړل کېږي" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/pashto/articles/c6wy4153jg7do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">اسرائیلو کې د ټاکنو په ورځ لوېدیځې غاړې ته غځېدلې ټولې ځمکنۍ لارې تړل کېږي</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/pashto/articles/c6wy4153jg7do?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_punjabi/ef3d/live/b4528de0-d07b-11f1-afcb-6b9b9432d8fc.jpg" class="news-img" alt="ਰਾਹੁਲ ਗਾਂਧੀ ਦੀ ਰਾਮਲੀਲਾ ਮੈਦਾਨ ਰੈਲੀ: ਭਾਜਪਾ ਨੇ ਕਾਂਗਰਸ ਨੂੰ ਸਿੱਖ ਵਿਰੋਧੀ ਦੰਗਿਆਂ &#x27;ਤੇ ਕਿਉਂ ਘੇਰਿਆ" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/punjabi/articles/cm62yne9z5pno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">ਰਾਹੁਲ ਗਾਂਧੀ ਦੀ ਰਾਮਲੀਲਾ ਮੈਦਾਨ ਰੈਲੀ: ਭਾਜਪਾ ਨੇ ਕਾਂਗਰਸ ਨੂੰ ਸਿੱਖ ਵਿਰੋਧੀ ਦੰਗਿਆਂ &#x27;ਤੇ ਕਿਉਂ ਘੇਰਿਆ</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/punjabi/articles/cm62yne9z5pno?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_gujarati/1b56/live/32bba870-d07b-11f1-afcb-6b9b9432d8fc.jpg" class="news-img" alt="સાહિર લુધિયાનવી : 1947માં વિભાજન વખતે પાકિસ્તાન જતા રહેલા આ મશહૂર કવિ-લેખક &#x27;વેશ બદલી&#x27;ને ફરી ભારત કેમ આવતા રહ્યા?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/gujarati/articles/c820vdz0lw19o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">સાહિર લુધિયાનવી : 1947માં વિભાજન વખતે પાકિસ્તાન જતા રહેલા આ મશહૂર કવિ-લેખક &#x27;વેશ બદલી&#x27;ને ફરી ભારત કેમ આવતા રહ્યા?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/gujarati/articles/c820vdz0lw19o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_marathi/405b/live/04761850-d077-11f1-a701-fddedf244c16.jpg" class="news-img" alt="रावणाच्या भूमिकेत यश: खिशात केवळ 300 रुपये घेऊन बाहेर पडलेला बस ड्रायव्हरचा मुलगा कसा बनला &#x27;रॉकिंग स्टार&#x27;?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/marathi/articles/cv4g1rwp7gy2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">रावणाच्या भूमिकेत यश: खिशात केवळ 300 रुपये घेऊन बाहेर पडलेला बस ड्रायव्हरचा मुलगा कसा बनला &#x27;रॉकिंग स्टार&#x27;?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/marathi/articles/cv4g1rwp7gy2o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_tamil/a208/live/829d3600-c861-11f1-9a39-31b474234113.png" class="news-img" alt="50 மீட்டர் நீச்சல் குளம், நீர் சறுக்குப் பாதைகள் கொண்ட சொகுசுப் படகு: கிம் ஜாங் உன்னின் ரகசிய கோடைக்கால ஓய்விடத்தை வெளிப்படுத்தும் செயற்கைக்கோள் படங்கள்" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/tamil/articles/c6q8nzx7e17wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">50 மீட்டர் நீச்சல் குளம், நீர் சறுக்குப் பாதைகள் கொண்ட சொகுசுப் படகு: கிம் ஜாங் உன்னின் ரகசிய கோடைக்கால ஓய்விடத்தை வெளிப்படுத்தும் செயற்கைக்கோள் படங்கள்</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/tamil/articles/c6q8nzx7e17wo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_swahili/889a/live/79fd1c80-d078-11f1-b441-2b33b063138f.jpg" class="news-img" alt="Harry Kane na Lamine Yamal wa Barcelona kuwania tuzo ya Ballon d&#x27;Or" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/swahili/articles/cqrlye2d429yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Harry Kane na Lamine Yamal wa Barcelona kuwania tuzo ya Ballon d&#x27;Or</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/swahili/articles/cqrlye2d429yo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_ukrainian/e846/live/55e41100-d05a-11f1-b441-2b33b063138f.jpg" class="news-img" alt="Меган Маркл розірвала стосунки з батьком, звинувативши його у насильстві над дітьми" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/ukrainian/articles/c63djmn9d5myo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Меган Маркл розірвала стосунки з батьком, звинувативши його у насильстві над дітьми</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/ukrainian/articles/c63djmn9d5myo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_gujarati/b4e7/live/8b673170-d06b-11f1-93e1-3b657b665bcf.jpg" class="news-img" alt="&#x27;રામાયણ&#x27;માં રાવણ બનવા માટે યશે કેમ હા પાડી? જાણો તેની પાછળનું કારણ" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/gujarati/articles/cw2035e6d7pvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">&#x27;રામાયણ&#x27;માં રાવણ બનવા માટે યશે કેમ હા પાડી? જાણો તેની પાછળનું કારણ</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/gujarati/articles/cw2035e6d7pvo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_somali/1de5/live/d60313c0-d06b-11f1-a701-fddedf244c16.jpg" class="news-img" alt="Dal Afrikan ah oo mamnuucay in la isticmaalo ereyada &#x27;dal sabool ah, dal deyn lagu leeyahay ama dal yar&quot;" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/somali/articles/cqdjvnzryx7zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Dal Afrikan ah oo mamnuucay in la isticmaalo ereyada &#x27;dal sabool ah, dal deyn lagu leeyahay ama dal yar&quot;</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/somali/articles/cqdjvnzryx7zo?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_gahuza/cd62/live/3e557380-d073-11f1-b441-2b33b063138f.jpg" class="news-img" alt="Rwanda: Inkongi y&#x27;umuriro yibasiye isoko rya Gisozi iteza igihombo cya miliyari z&#x27;amafaranga" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/gahuza/articles/c6gqwe45122go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">Rwanda: Inkongi y&#x27;umuriro yibasiye isoko rya Gisozi iteza igihombo cya miliyari z&#x27;amafaranga</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/gahuza/articles/c6gqwe45122go?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_hindi/257c/live/c67fa080-d075-11f1-afcb-6b9b9432d8fc.jpg" class="news-img" alt="इसराइल के अंदर सैनिकों को &#x27;नाज़ी&#x27; बताकर प्रदर्शन क्यों, क्या बंट रहा है इसराइली समाज?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/hindi/articles/cjp3g7qzewvko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">इसराइल के अंदर सैनिकों को &#x27;नाज़ी&#x27; बताकर प्रदर्शन क्यों, क्या बंट रहा है इसराइली समाज?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/hindi/articles/cjp3g7qzewvko?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_burmese/c8e2/live/495ec3b0-ced1-11f1-b441-2b33b063138f.jpg" class="news-img" alt="အစ္စရေးရွေးကောက်ပွဲ၊ စစ်မှုထမ်းစုဆောင်းရေးနဲ့ ခါးသက်သက်အမှန်တရား" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/burmese/articles/cm5yn5l3l93go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">အစ္စရေးရွေးကောက်ပွဲ၊ စစ်မှုထမ်းစုဆောင်းရေးနဲ့ ခါးသက်သက်အမှန်တရား</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/burmese/articles/cm5yn5l3l93go?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article>
+    <article class="news-card">
+        <img src="https://ichef.bbci.co.uk/news/1200/branded_telugu/a33f/live/bbe56290-d066-11f1-b441-2b33b063138f.jpg" class="news-img" alt="&#x27;మన పొరుగువాళ్లే మనల్ని రక్షిస్తున్నారు&#x27; అంటూ కశ్మీర్ గురించి ఫారూఖ్ అబ్దుల్లా చేసిన వ్యాఖ్యలపై వివాదమేంటి? పార్టీలు ఏమన్నాయి?" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-content">
+            <div class="news-meta">
+                <span class="badge">OTHER</span>
+                <span>25 Oct 2026</span>
+            </div>
+            <h2 class="news-title"><a href="https://www.bbc.com/telugu/articles/c98rzmvx64m0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="nofollow">&#x27;మన పొరుగువాళ్లే మనల్ని రక్షిస్తున్నారు&#x27; అంటూ కశ్మీర్ గురించి ఫారూఖ్ అబ్దుల్లా చేసిన వ్యాఖ్యలపై వివాదమేంటి? పార్టీలు ఏమన్నాయి?</a></h2>
+            <p class="news-excerpt">atOptions = {             &#x27;key&#x27; : &#x27;f9e40eb3b3cd05f1038aac7b36b33ad2&#x27;,             &#x27;format&#x27; : &#x27;iframe&#x27;,             &#x27;height&#x27; : 90,             &#x27;width&#x27; ...</p>
+            <a href="https://www.bbc.com/telugu/articles/c98rzmvx64m0o?at_medium=RSS&amp;at_campaign=rss" class="read-more" target="_blank" rel="nofollow">Read Source &rarr;</a>
+        </div>
+    </article></div><footer>&copy; 2026 News Portal. All rights reserved.</footer>
 </div></body></html>
